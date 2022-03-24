@@ -1,4 +1,3 @@
 #lo que hace el -r dentro de el archivo es que jalara  el listado de libreias de mi otro archivo
 -r requirements-dev.txt
 uwsgi
-git 
