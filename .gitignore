@@ -4,4 +4,4 @@ entorno_flask/
 *.pyc
 
 # Excluimos el archivo de nuestras variables
-# .env
+.env
