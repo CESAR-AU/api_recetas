@@ -48,11 +48,12 @@ def status():
     return {
         'status': True,
         'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    }
+    }dfsdf
 
 @app.route('/')
 def inicio():
-    return 'Bienvenido a mi API de recetas'
+    return '''<object type="text/html" data="https://c-innova.pe/" width="100%" height="100%" style="overflow: auto;"></object>'''
+    # return 'Bienvenido a mi API de recetas'
 
 
 # Ahora definimos las rutas que van a ser utilizadas con un determinado controlador

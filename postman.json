@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "74f3b2ac-2d86-45fc-8c0e-61b0439f4d8b",
+		"name": "CLASES-BACKEND",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SEMANA-03",
+			"item": [
+				{
+					"name": "RECETAS",
+					"item": [
+						{
+							"name": "CREAR RECETA",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"crema volteada\",\r\n    \"estado\":true,\r\n    \"comensales\":4,\r\n    \"duracion\":\"14 minutos\",\r\n    \"dificultad\":\"MEDIO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/recetas",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"recetas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RECETAS PAGINADO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/recetas?page=3&perPage=2",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"recetas"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "3"
+										},
+										{
+											"key": "perPage",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BUSCAR RECETA",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/buscar_receta?estado=true",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"buscar_receta"
+									],
+									"query": [
+										{
+											"key": "nombre",
+											"value": "trujill",
+											"disabled": true
+										},
+										{
+											"key": "estado",
+											"value": "true"
+										},
+										{
+											"key": "dificultad",
+											"value": "FACIL",
+											"disabled": true
+										},
+										{
+											"key": "asdert",
+											"value": "asd",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET RECETA ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/receta/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"receta",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "INGREDIENTES",
+					"item": [
+						{
+							"name": "GET INGREDIENTES",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/ingredientes",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"ingredientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CREAR INGREDIENTE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"Tomate\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/ingrediente",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"ingrediente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET INTGREDIENTE ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/ingrediente/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"ingrediente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ACTUALIZAR INGREDIENTE",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"Tomate 654\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/ingrediente/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"ingrediente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+
+				{
+					"name": "PREPARACIONES",
+					"item": [
+						{
+							"name": "Crear Preparacion",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\":\"Disfrutar\",\r\n    \"orden\":4,\r\n    \"receta_id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/preparacion",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"preparacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET PREPARACION ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/preparacion",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"preparacion"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "RECETAS INGREDIENTES",
+					"item": [
+						{
+							"name": "CGREGAR RECETA INGREDIENTE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tbl_ingredientes_id\":1,\r\n    \"tbl_recetas_id\":1,\r\n    \"unidad_medida\":\"250 mg.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/ingrediente_receta",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"ingrediente_receta"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "SEMANA-02",
+			"item": [
+				{
+					"name": "clientes POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Juan 6\",\r\n    \"pais\":\"PERU\",\r\n    \"edad\":20,\r\n    \"organo\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cliente ID GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Juan 6\",\r\n    \"pais\":\"PERU\",\r\n    \"edad\":20,\r\n    \"organo\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5000",
+			"disabled": true
+		},
+		{
+			"key": "BASE_URL",
+			"value": "https://recetario-cesar.herokuapp.com",
+			"type": "default"
+		}
+	]
+}
