@@ -48,7 +48,7 @@ def status():
     return {
         'status': True,
         'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    }dfsdf
+    }
 
 @app.route('/')
 def inicio():
